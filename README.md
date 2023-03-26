@@ -36,6 +36,7 @@ The following Deep learning algorithms are applied and then they are compared to
 A)TCN
 
 Temporal Convolutional Networks, or simply TCN is a variation over Convolutional Neural Networks for sequence modeling tasks.
+
 <img width="463" alt="image" src="https://user-images.githubusercontent.com/125439405/227759445-04fc0bd9-f948-4785-b414-ebf5e38cdcc3.png">
 
 The encoded & padded data is fed into the model through the input layer which is further connected to the EMBEDDING layer. The Embedding layer converts data of high
@@ -87,6 +88,7 @@ a threshold of 0.5 to classify a tweet.
 
 The summarized results of our proposed method based on different models are
 presented .
+
 <img width="402" alt="image" src="https://user-images.githubusercontent.com/125439405/227759664-d3e4e502-afa1-440e-9194-a0f61792ca79.png">
 
 According to the accuracy graphs, the LSTM model has the highest accuracy with an estimated score of 0.80815. Thus, we draw the conclusion that the LSTM model is the most appropriate for categorising tweets as disaster-free or disaster-related
