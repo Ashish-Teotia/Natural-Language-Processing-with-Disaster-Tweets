@@ -3,8 +3,11 @@ This competition is available on kaggle .The link of the same is-https://www.kag
 
 The team members are:-
 Ashish Choudhary-20BRS1234
+
 Om Kajave-20BRS1130
+
 Pulak Jain-20BRS1126
+
 Rishabh Jain-20BRS1065
 
 METHODOLOGY 
