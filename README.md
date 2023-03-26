@@ -16,7 +16,9 @@ Rishabh Jain-20BRS1065
 METHODOLOGY 
 
 1)Data Description and Pre-Processing
+
 The general preprocessing steps are:
+
 A.Converting the text to lowercase
 B. Removing stop words, punctuations, URLs, numeric numbers, and special characters from
 the tweets
@@ -28,9 +30,11 @@ E.Encoding is performed on the data
 F. Converting the text into a sequence and performing padding
 
 2)Deep Learning algorithms
+
 The following Deep learning algorithms are applied and then they are compared to find which performs better.
 
 A)TCN
+
 Temporal Convolutional Networks, or simply TCN is a variation over Convolutional Neural Networks for sequence modeling tasks.
 <img width="463" alt="image" src="https://user-images.githubusercontent.com/125439405/227759445-04fc0bd9-f948-4785-b414-ebf5e38cdcc3.png">
 
@@ -38,6 +42,7 @@ The encoded & padded data is fed into the model through the input layer which is
 dimension into lower dimension allowing the network to learn more about the relationship between inputs and to process the data more efficiently. SpatialDropout1D helps in promoting independence between feature maps, thus enhancing the regularization of activations.TCNs are able to extract long-term patterns using dilated causal convolutions and residual blocks. TCN also allows for parallel computation of outputs which can also be more efficient in terms of computation time. The dilations of [1,2,4] are used to enlarge the receptive field while maintaining resolution. The output of two stacked TCN layers is concatenated after performing global average & global max pooling in order to extract max and average features from the feature map.The concatenation layer output is produced as an input to the hidden dense network which compromises L2 regularization with 0.1 as the shrinkage coefficient in order to avoid overfitting. The dropout layer with an optimal value of 0.4 is also used for the same. Another Dense hidden layer with 16 neurons is used with an activation function as relu, followed by a dropout layer and output layer. The output layer provides the probability of classes using the sigmoid activation function. The model was trained on a batch size of 128 with a learning rate of 0.0000001. Adam was used to optimize the model. The kernel size of 3 is recognized as better. The model achieved an accuracy of 60% on test data. The learning was improved by decreasing the learning rate.
 
 B)BERT
+
 BERT, which stands for Bidirectional Encoder Representations from Transformers, is based on Transformers, a deep learning model in which every output element is connected to every input element, and the weightings between them are dynamically calculated based on their connection.
 <img width="457" alt="image" src="https://user-images.githubusercontent.com/125439405/227759538-8cd94bfa-e159-45be-8fcb-4d596956c47d.png">
 
@@ -45,6 +50,7 @@ The BERT architecture consists of several layers of Transformers. The input to t
 network from relying too much on specific neurons and their connections. This encourages the network to learn more robust features and reduces the risk of overfitting. Therefore it is passed to the output layer with sigmoid as an activation function for binary classification of whether a tweet is pertaining to disaster or not.
 
 C)LSTM
+
 LSTM stands for long short-term memory networks, it is a variety of recurrent neural networks (RNNs) that are capable of learning long-term dependencies, especially in sequence prediction problems. LSTM has feedback connections, i.e., it is capable of processing the entire sequence of data, apart from single data points such as images.
 
 <img width="352" alt="image" src="https://user-images.githubusercontent.com/125439405/227759616-05c90d5b-436a-4ada-8343-56a3d0cb1846.png">
@@ -77,6 +83,7 @@ avoid overfitting. Once the model is fitted, evaluation is performed on the test
 a threshold of 0.5 to classify a tweet.
 
 3)Results and Discussions
+
 The summarized results of our proposed method based on different models are
 presented .
 <img width="402" alt="image" src="https://user-images.githubusercontent.com/125439405/227759664-d3e4e502-afa1-440e-9194-a0f61792ca79.png">
